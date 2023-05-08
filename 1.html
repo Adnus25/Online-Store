@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Online Store</title>
+    <style>
+body {
+  background-color: black;
+  color: white;
+}
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px #ccc;
+            max-width: 200px; 
+            max-height: 350px;
+            margin-bottom: 20px; 
+        }
+
+        .container img {
+            width: 200px; 
+            height: 200px;
+            margin-bottom: 10px;
+            object-fit: cover; 
+        }
+
+        .container h4 {
+            margin: 5px;
+            font-size: 16px;
+            color: #000;
+        }
+
+
+        .container p {
+            margin: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #000; 
+        }
+
+        .container span {
+            font-weight: normal;
+            color: #777;
+        }
+ ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding-left: 0;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+	<center><h1>Welcome to My Online Store</h1></center>
+	<center><h2>Products</h2></center>
+	<ul><center><p><div class="container">
+				<img src="pen1.webp" alt="Product 1">
+			<h4>Product 1</h4>
+				<p><span>&#8369;150 </span>(per item)<p>
+</div><p><br></center>
+<center><left><div class="container">
+				<img src="usb.jpg" alt="Product 2">
+				<h4>Product 2</h4>
+					<p><span>&#8369;599 </span>(per item)</p>	
+	</div><br></left></center>
+<center><left><div class="container">
+				<img src="ras.webp" alt="Product 3">
+				<h4>Product 3</h4>
+					<p><span>&#8369;1,599 </span>(per item)</p>
+		</div><br><left></center>
+		<center><div class="container">
+				<img src="book.png" alt="Product 4">
+				<h4>Product 4</h4>
+					<p><span>&#8369;1,000 </span>(per item)</p> 
+		</div><br></center>
+			<center><div class="container">
+				<img src="ear.jpg" alt="Product 5">
+				<h4>Product 5</h4>
+					<p><span>&#8369;399 </span>(per item)</p> 
+</div><br></center>
+	</ul>
+	
+	<h2>Order Form</h2>
+	<form method="post" action="process_order.php">
+		<label for="product">Product:</label>
+		<select id="product" name="product">
+			<option value="0">Product 1</option>
+			<option value="1">Product 2</option>
+			<option value="2">Product 3</option>
+			<option value="3">Product 4</option>
+			<option value="4">Product 5</option>
+		</select><br><br>
+		
+		<label for="quantity">Quantity:</label>
+		<input type="number" id="quantity" name="quantity"><br><br>
+		
+		<label for="payment_option">Payment Option:</label>
+		<select id="payment_option" name="payment_option">
+			<option value="paypal">PayPal</option>
+			<option value="gcash">Gcash</option>
+			<option value="paymaya">PayMaya</option>
+		</select><br><br>
+		
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
